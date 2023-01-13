@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import express from 'express';
-import helmet from 'helmet';
+// import helmet from 'helmet';
 import morgan from 'morgan';
 import path from 'path';
 
@@ -11,12 +11,12 @@ import immoRouter from './routes/immo.js';
 dotenv.config();
 const app = express();
 
-app.use(helmet());
-app.use(
-  helmet({
-    contentSecurityPolicy: false,
-  }),
-);
+// app.use(helmet());
+// app.use(
+//   helmet({
+//     contentSecurityPolicy: false,
+//   }),
+// );
 app.use(morgan('tiny'));
 app.use(express.json());
 
